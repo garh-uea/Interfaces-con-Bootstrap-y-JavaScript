@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Papelería Compu Click</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ================= MENÚ ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container-fluid px-5">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="Multimedia/Compu_Click.png" class="logo-nav">
+            <span class="ms-2">Compu Click</span>
+        </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#precios">Lista de Precios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= ENCABEZADO ================= -->
+<header class="hero-full">
+    <div class="container-fluid">
+        <div class="row align-items-center min-vh-100 px-5">
+            <div class="col-lg-6 text-light">
+                <h5 class="hero-subtitle">CRECE CON NOSOTROS</h5>
+                <h1 class="hero-title">PAPELERÍA <span>COMPU CLICK</span></h1>
+                <p>Útiles escolares, artículos de oficina, impresiones, recargas, insumos de aseo y más...</p>
+                <a href="#precios" class="btn btn-primary btn-lg me-3">Ver precios</a>
+                <a href="#registro" class="btn btn-outline-light btn-lg">Registrarse</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="Multimedia/Portada1.png" class="img-fluid hero-img">
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container my-5">
+
+<div class="text-center my-4">
+    <button class="btn btn-danger btn-lg" onclick="ofertaDia()">
+        OFERTA DEL DÍA
+    </button>
+</div>
+
+
+<!-- ================= CARRUSEL ================= -->
+<section id="servicios" class="my-5">
+    <h2 class="text-center mb-4">Nuestros Servicios</h2>
+
+    <div id="carouselServicios" class="carousel slide carousel-center" data-bs-ride="carousel" data-bs-interval="1800">
+        <div class="carousel-inner rounded shadow">
+            <div class="carousel-item active"><img src="Multimedia/Escaneo.jpg" class="w-100"></div>
+            <div class="carousel-item"><img src="Multimedia/Mantenimiento.jpg" class="w-100"></div>
+            <div class="carousel-item"><img src="Multimedia/Copias.jpg" class="w-100"></div>
+            <div class="carousel-item"><img src="Multimedia/Impresiones.png" class="w-100"></div>
+            <div class="carousel-item"><img src="Multimedia/SRI.png" class="w-100"></div>
+            <div class="carousel-item"><img src="Multimedia/Chips.jpg" class="w-100"></div>
+        </div>
+
+        <button class="carousel-control-prev flecha" type="button" data-bs-target="#carouselServicios" data-bs-slide="prev">‹</button>
+        <button class="carousel-control-next flecha" type="button" data-bs-target="#carouselServicios" data-bs-slide="next">›</button>
+    </div>
+</section>
+
+<!-- ================= TABLA ================= -->
+<section id="precios" class="my-5">
+    <h2 class="text-center mb-4">Lista de Precios</h2>
+
+    <div class="table-responsive">
+        <table class="table table-hover tabla-precios">
+            <thead>
+                <tr>
+                    <th>Producto / Servicio</th>
+                    <th>Categoría</th>
+                    <th>Detalle</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Cuaderno</td><td>Útiles</td><td>100 hojas</td><td>$1.50</td></tr>
+                <tr><td>Resma A4</td><td>Oficina</td><td>500 hojas</td><td>$4.00</td></tr>
+                <tr><td>Impresión B/N</td><td>Servicios</td><td>Por hoja</td><td>$0.10</td></tr>
+                <tr><td>Impresión color</td><td>Servicios</td><td>Alta calidad</td><td>$0.50</td></tr>
+                <tr><td>Escaneo</td><td>Servicios</td><td>PDF/JPG</td><td>$0.20</td></tr>
+                <tr><td>Plastificado</td><td>Servicios</td><td>A4</td><td>$1.00</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ================= FORMULARIO ================= -->
+<section id="registro" class="my-5">
+    <h2 class="text-center mb-4">Registro de Clientes</h2>
+
+    <form id="formularioRegistro" class="row g-3">
+        <div class="col-md-6 campo">
+            <input type="text" id="nombre" class="form-control" placeholder="Nombre completo">
+            <small id="errorNombre"></small>
+        </div>
+
+        <div class="col-md-6 campo">
+            <input type="email" id="correo" class="form-control" placeholder="Correo electrónico">
+            <small id="errorCorreo"></small>
+        </div>
+
+        <div class="col-md-6 campo">
+            <input type="password" id="contrasena" class="form-control" placeholder="Contraseña">
+            <small class="info">Mínimo 8 caracteres, mayúscula, número y símbolo</small>
+            <small id="errorContrasena"></small>
+        </div>
+
+        <div class="col-md-6 campo">
+            <input type="password" id="confirmarContrasena" class="form-control" placeholder="Confirmar contraseña">
+            <small id="errorConfirmacion"></small>
+        </div>
+
+        <div class="col-md-6 campo">
+            <input type="number" id="edad" class="form-control" placeholder="Edad">
+            <small id="errorEdad"></small>
+        </div>
+
+        <div class="col-md-6 campo">
+            <input type="text" id="ciudad" class="form-control" placeholder="Ciudad">
+            <small id="errorCiudad"></small>
+        </div>
+
+        <div class="col-md-6 campo">
+            <input type="tel" id="celular" class="form-control" placeholder="Celular">
+            <small id="errorCelular"></small>
+        </div>
+
+        <div class="col-md-6 campo">
+            <select id="categoria" class="form-control">
+                <option value="">Categoría de interés</option>
+                <option>Útiles escolares</option>
+                <option>Oficina</option>
+                <option>Servicios</option>
+            </select>
+            <small id="errorCategoria"></small>
+        </div>
+
+        <div class="col-md-6 campo">
+            <select id="origen" class="form-control">
+                <option value="">¿Cómo nos conoció?</option>
+                <option>Redes sociales</option>
+                <option>Recomendación</option>
+                <option>Visita al local</option>
+            </select>
+            <small id="errorOrigen"></small>
+        </div>
+
+        <div class="col-12 text-center">
+            <button id="botonEnviar" class="btn btn-success px-4" disabled>Registrar</button>
+            <button type="button" id="botonLimpiar" class="btn btn-secondary px-4 ms-2">Limpiar</button>
+        </div>
+    </form>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>Síguenos en redes sociales</p>
+    <div class="redes">
+        <a href="https://www.facebook.com/LaPapeleriaDelAhorro" target="_blank"><img src="Multimedia/facebook.png"></a>
+        <a href="https://www.instagram.com/gustavoadolfo.rodriguezholguin?igsh=MWozYnN5anU0NnJ2cA==" target="_blank"><img src="Multimedia/instagram.png"></a>
+        <a href="https://www.tiktok.com/@amazonia_rc5?_r=1&_t=ZS-93UJ8Nn0TFx" target="_blank"><img src="Multimedia/tiktok.png"></a>
+        <a href="https://wa.me/593999532532" target="_blank"><img src="Multimedia/whatsapp.png"></a>
+    </div>
+    <p>© 2026 Papelería Compu Click</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

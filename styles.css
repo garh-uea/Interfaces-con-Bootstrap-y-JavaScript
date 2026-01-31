@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.logo-nav {
+    width: 40px;
+}
+
+.hero-full {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+}
+
+.hero-title span {
+    color: #00e5ff;
+}
+
+.carousel-center {
+    max-width: 900px;
+    margin: auto;
+}
+
+.flecha {
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top: 45%;
+}
+
+.tabla-precios {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-precios thead {
+    background: linear-gradient(135deg, #ff6f00, #ff8f00);
+    color: white;
+    font-size: 1.1rem;
+}
+
+.tabla-precios tbody tr:nth-child(even) {
+    background-color: #fff3e0;
+}
+
+.tabla-precios tbody tr:hover {
+    background-color: #ffe0b2;
+    font-weight: 500;
+}
+
+.campo small {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.valido small {
+    color: green;
+}
+
+.invalido small {
+    color: red;
+}
+
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer img {
+    width: 30px;
+    margin: 0 8px;
+}
+
+.carousel-inner img {
+    height: 420px;
+    object-fit: cover;
+}
+
+.footer .redes img {
+    transition: transform 0.3s ease;
+}
+
+.footer .redes img:hover {
+    transform: scale(1.2);
+}
+
+#botonEnviar,
+#botonLimpiar {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#botonEnviar:hover,
+#botonLimpiar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+select.form-control {
+    appearance: auto;
+}
